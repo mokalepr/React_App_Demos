@@ -17,6 +17,13 @@ export default function App() {
     <div className="container">
       <div className="py-4">
         <table className="table border shadow">
+          <thead>
+            <tr>
+              <th scope="col">Sr No</th>
+              <th scope="col">Quote</th>
+              <th scope="col">Author Name</th>
+            </tr>
+          </thead>
           <tbody>
             {quotes.map((quote, index) => (
               <tr>
@@ -24,6 +31,7 @@ export default function App() {
                   {index + 1}
                 </th>
                 <td>{quote.text}</td>
+                <td>{quote.author}</td>
               </tr>
             ))}
           </tbody>
